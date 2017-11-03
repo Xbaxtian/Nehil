@@ -8,12 +8,7 @@ include_once("../CDatos/ds/Conexion.php");
 
 class ProductoDAO implements IProductoDAO{
    
-    private $cn;
-    
-  /*  function __construct() {
-        
-    }
-
+ 
 */
     public function productofaltante() {
     
@@ -97,7 +92,7 @@ class ProductoDAO implements IProductoDAO{
            echo " conectado"."</br>";
 
            $cProducto = $bd->selectCollection('Producto');
-  //  $cProducto  = new MongoCollection($bd,'Producto');
+ 
     
             print_r($cProducto);
      
@@ -107,7 +102,7 @@ class ProductoDAO implements IProductoDAO{
            $cursor = $cProducto -> find($condicion);
 
           foreach($cursor as $producto){
-    //echo "foreach"; echo "</br>";
+   
       
           $stocknuevo = $producto['stock'];
           $stocknuevo = $stocknuevo - 1;
