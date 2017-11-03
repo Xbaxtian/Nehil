@@ -10,11 +10,7 @@ class Orden {
    private $date;
    private $limite;
    private $listadeproductos = array();
-  // private $listadeproductos = array('id'=>array(),'nombre'=>array(),'descripcion'=>array(),'precio'=>array(),'stock'=>array(),'stocking'=>array() );
-
-
- //  $pBB = array("title" => array(), "type" => array());
-   
+  
 
 
     function setID($ID) {
@@ -54,25 +50,15 @@ class Orden {
        return $this->listadeproductos;
     }
 
-  /*  function agregarProducto($listadeproductos){
-              
-              echo "fuck5";
- //   $listadeproductos[] = array('id'=>$producto->getID(),'nombre'=>$producto->getNombre(),'descripcion'=>$producto->getDescripcion(),'precio'=>$producto->getPrecio(),'stock'=>$producto->getStock(),'stocking'=>$producto->getStocking());
  
-     
-    //   $listadeproductos[] = ($producto);
-    print_r($listadeproductos); 
-    }
-    */
     function Ingresar(){
 
-  //   print_r( $this->getListadeproductos());
-//
+ 
         $Cdao = new DAOFactory1();
         $iord = $Cdao->getOrdenDAO(); 
         $iord->agregarorden($this);
 
-        echo "fuck6";
+        
     }
     
     
